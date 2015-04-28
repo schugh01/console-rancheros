@@ -1,4 +1,4 @@
-FROM docker pull tatsushid/tinycore
+FROM docker pull tatsushid/tinycore:6.1-x86
 RUN tce-load -wic git
 RUN rm -rf /etc/ssh/*key*
 COPY entry.sh /usr/sbin/

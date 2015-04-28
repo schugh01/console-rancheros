@@ -15,5 +15,5 @@ RUN sudo addgroup -g 1100 rancher && \
     sudo sed -i 's/rancher:!/rancher:*/g' /etc/shadow && \
     echo "## allow password less for rancher user" | sudo tee -a /etc/sudoers && \
     echo "rancher ALL=(ALL) NOPASSWD: ALL" | sudo tee -a /etc/sudoers 
-ENTRYPOINT ["/usr/sbin/entry.sh"]
-#CMD ["/usr/sbin/console.sh"]
+#ENTRYPOINT ["/usr/sbin/entry.sh"]
+CMD ["/usr/sbin/console.sh"]

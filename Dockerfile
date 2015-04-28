@@ -3,9 +3,9 @@ RUN apt-get update && \
     apt-get upgrade --no-install-recommends -y && \
     apt-get install -y --no-install-recommends openssh-server rsync vim
 RUN rm -rf /etc/ssh/*key*
-COPY scripts/dockerimages/scripts/entry.sh /usr/sbin/
-COPY scripts/dockerimages/scripts/console.sh /usr/sbin/
-COPY scripts/dockerimages/scripts/update-ssh-keys /usr/bin/
+COPY entry.sh /usr/sbin/
+COPY console.sh /usr/sbin/
+COPY update-ssh-keys /usr/bin/
 RUN echo 'RancherOS \\n \l' > /etc/issue
 RUN locale-gen en_US.UTF-8
 RUN addgroup --gid 1100 rancher && \

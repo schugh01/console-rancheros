@@ -1,5 +1,6 @@
-FROM gliderlabs/alpine:3.1
-RUN apk --update add git
+FROM ubuntu:14.04.2
+#FROM gliderlabs/alpine:3.1
+#RUN apk --update add git
 RUN rm -rf /etc/ssh/*key*
 COPY entry.sh /usr/sbin/
 COPY console.sh /usr/sbin/
